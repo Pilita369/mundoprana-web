@@ -1,0 +1,195 @@
+/* ======================================================= */
+/* ===== BLOG MUNDO PRANA =============================== */
+/* ======================================================= */
+/* Sólo se carga en page/blog.html y las páginas de artículos */
+
+/* Evitar barras horizontales */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Caja consistente */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ===== HERO BLOG ===== */
+/* Fondo verde con textura de hojas, sólo en el hero */
+.hero-blog {
+  background:
+    linear-gradient(rgba(72, 120, 80, 0.55), rgba(255, 255, 255, 0.10)),
+    url("../img/fondos/fondo-frase-destacada.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 5rem 1rem 4rem;
+  color: #fff;
+}
+
+/* Contenedor interno del hero */
+.hero-blog-contenido {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(11, 11, 11, 0.1);
+  padding: 2rem 1.5rem;
+  border-radius: 14px;
+}
+
+/* Título del blog */
+.titulo-blog {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  letter-spacing: 1px;
+  color: #eaf7ec;
+  margin-bottom: 0.5rem;
+}
+
+/* Subtítulo */
+.hero-blog p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #f6f6f6;
+}
+
+/* ===== CONTENIDO PRINCIPAL DEL BLOG ===== */
+.blog-main {
+  padding: 4rem 1.5rem;
+  background-color: #fdf9f4; /* beige muy suave */
+}
+
+/* Grid de tarjetas usando CSS Grid */
+.blog-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* Tarjeta individual */
+.blog-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen de la tarjeta */
+.blog-card img {
+  width: 90%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Contenido de texto de la tarjeta */
+.blog-info {
+  padding: 1.5rem;
+}
+
+/* Título del artículo en la tarjeta */
+.blog-info h3 {
+  color: #2a5954;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Descripción breve */
+.blog-info p {
+  color: #555;
+  font-size: 0.98rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Botón "Leer artículo" */
+.blog-info .leer-mas {
+  display: inline-block;
+  background: #682288;
+  color: #fff;
+  border-radius: 25px;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover en tarjeta y botón */
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+.blog-info .leer-mas:hover {
+  background-color: #4b1762;
+  transform: translateY(-1px);
+}
+
+/* ===== SECCIÓN FINAL / CTA ===== */
+.blog-final {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 4rem 1.5rem 4.5rem;
+}
+
+.blog-final h2 {
+  color: #125d2c;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+.blog-final p {
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Botón de la sección final reutiliza .btn-carta de styles.css,
+   pero por las dudas afinamos un poco acá también */
+.blog-final .btn-carta {
+  background: #48a76f;
+  color: #fff;
+  padding: 0.7rem 1.6rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.blog-final .btn-carta:hover {
+  background-color: #2a5954;
+}
+
+/* ===== EFECTO DE ENTRADA SUAVE ===== */
+.fade-in-blog {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+  will-change: opacity, transform;
+}
+
+.fade-in-blog.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero-blog {
+    padding: 4rem 1rem 3rem;
+  }
+
+  .titulo-blog {
+    font-size: 2.2rem;
+  }
+
+  .blog-main {
+    padding: 3rem 1rem;
+  }
+}

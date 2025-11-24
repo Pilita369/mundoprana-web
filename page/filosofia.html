@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filosofía - Mundo Prana</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/filosofia.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ========= HEADER UNIFICADO ========= -->
+<header class="header-principal">
+  <nav class="nav-prana">
+   <a href="../index.html" class="logo-link">
+        <img src="../img/Logo/Diseño sin título (13).png" class="logo-header" alt="Logo Mundo Prana">
+      </a>
+
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="./filosofia.html" class="activo">Filosofía</a></li>
+      <li><a href="./blog.html">Blog</a></li>
+      <li><a href="./contactos.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!-- ========= HERO CON HOJAS ========= -->
+<section class="filosofia-hero fade-in">
+  <div class="filosofia-overlay">
+    <h1>🌿 Nuestra Filosofía</h1>
+    <p>Creemos que comer bien es mucho más que alimentarse: es una forma de conectar con la vida, el cuerpo y la tierra.</p>
+  </div>
+</section>
+
+
+<!-- ========= INTRODUCCIÓN ========= -->
+<section class="filosofia-intro fade-in">
+  <h2>Alimentación con propósito</h2>
+  <p>
+    En <strong>Mundo Prana</strong> elaboramos viandas saludables con materia prima integral,
+    semillas y legumbres, combinadas con carnes rojas y pollo de calidad.
+  </p>
+  <p>
+    Cada receta nace desde la intención de nutrir el cuerpo y también el espíritu, respetando los tiempos naturales de cada ingrediente.
+  </p>
+</section>
+
+
+<!-- ========= INSPIRACIÓN ========= -->
+<section class="filosofia-inspiracion fade-in">
+
+  <div class="filosofia-texto">
+    <h2>Inspirados en una mirada integral del bienestar 🌸</h2>
+    <p>
+      Nuestra filosofía se inspira en una visión integral del bienestar, influenciada por referentes como
+      <strong>Gabriel Husein</strong> y su enfoque consciente sobre la energía de los alimentos.
+    </p>
+
+    <blockquote>
+      “El cuerpo no se alimenta solo de nutrientes, sino de la energía y la conciencia con que elegimos lo que comemos.”
+      <br><span>– Gabriel Husein</span>
+    </blockquote>
+
+    <p>
+      Buscamos equilibrio entre lo natural y lo cotidiano, lo placentero y lo saludable, lo individual y lo colectivo.
+    </p>
+  </div>
+
+  <div class="filosofia-img">
+    <img src="../img/fondos/ingredientes.naturales.png" alt="Ingredientes naturales">
+  </div>
+
+</section>
+
+
+<!-- ========= PILARES ========= -->
+<section class="filosofia-pilares fade-in">
+  <h2>Nuestros pilares 🌱</h2>
+
+  <div class="pilares-grid">
+
+    <div class="pilar">
+      <i class="fa-solid fa-seedling"></i>
+      <h3>Bienestar integral</h3>
+      <p>Promovemos una alimentación consciente para nutrir cuerpo, mente y emociones.</p>
+    </div>
+
+    <div class="pilar">
+      <i class="fa-solid fa-bowl-food"></i>
+      <h3>Ingredientes naturales</h3>
+      <p>Materia prima integral, semillas, legumbres y proteínas de calidad.</p>
+    </div>
+
+    <div class="pilar">
+      <i class="fa-solid fa-heart"></i>
+      <h3>Hecho con amor</h3>
+      <p>Elaboración artesanal cuidada en cada detalle.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ========= FRASE FINAL ========= -->
+<section class="filosofia-cierre fade-in">
+  <p class="cita-final">
+    “Cuando comemos con conciencia, cultivamos salud, armonía y gratitud.”
+    <span>— Mundo Prana </span>
+  </p>
+</section>
+
+
+<!-- ========= FOOTER ========= -->
+<footer class="footer-minimal fade-in">
+  <div class="footer-contenedor">
+
+    <div class="footer-izquierda">
+      <img src="../img/Logo/Diseño sin título (13).png" class="footer-logo" alt="Logo Mundo Prana">
+      <div class="footer-redes">
+        <a href="https://www.instagram.com/mundopranapatagonia/p/CkjvOi1OjTK/?utm_source=chatgpt.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-derecha">
+      <a href="../index.html">Inicio</a>
+      <a href="./filosofia.html" class="activo">Filosofía</a>
+      <a href="./blog.html">Blog</a>
+      <a href="./contactos.html">Contacto</a>
+    </div>
+  </div>
+
+  <p class="creditos">Sitio desarrollado por <a href="#" target="_blank">Digitanea</a></p>
+</footer>
+
+
+<!-- ========= SCRIPT FADE-IN ========= -->
+<script>
+const elementos = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entradas) => {
+  entradas.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+elementos.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
