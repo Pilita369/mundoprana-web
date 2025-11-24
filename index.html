@@ -346,34 +346,54 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- FOOTER -->
-  <footer class="footer-minimal">
-    <div class="footer-contenedor">
-      <div class="footer-izquierda">
-        <img src="./img/Logo/Diseño sin título (13).png" alt="Logo Mundo Prana" class="footer-logo">
-        <div class="footer-redes">
-          <a href="https://www.instagram.com/mundopranapatagonia/p/CkjvOi1OjTK/?utm_source=chatgpt.com" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="https://www.facebook.com/mundopranapatagonia" target="_blank">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-        </div>
-      </div>
+ <footer class="footer-index">
 
-      <div class="footer-derecha">
-        <a href="#">Inicio</a>
-        <a href="./page/filosofia.html">Filosofía</a>
-        <a href="./page/blog.html">Blog</a>
-        <a href="./page/contactos.html">Contacto</a>
-      </div>
+  <div class="footer-izq">
+    <img src="./img/Logo/Diseño sin título (13).png" class="footer-logo" alt="Mundo Prana">
+    
+    <div class="footer-redes">
+      <a href="https://www.instagram.com/mundopranapatagonia/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/mundopranapatagonia" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
     </div>
+  </div>
 
-    <p class="creditos">
-      Sitio desarrollado por 
-      <a href="https://www.instagram.com/digitanea" target="_blank">Digitanea</a>
-    </p>
-  </footer>
+  <!-- MENÚ DE ESCRITORIO -->
+  <ul class="footer-menu-desktop">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="./page/filosofia.html">Filosofía</a></li>
+    <li><a href="./page/blog.html">Blog</a></li>
+    <li><a href="./page/contactos.html">Contacto</a></li>
+  </ul>
+
+  <!-- MENÚ HAMBURGUESA SOLO MÓVIL -->
+  <div class="footer-nav-movil">
+    <button class="hamburger" id="hamburgerMenu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <ul class="footer-menu" id="footerMenu">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="./page/filosofia.html">Filosofía</a></li>
+      <li><a href="./page/blog.html">Blog</a></li>
+      <li><a href="./page/contactos.html">Contacto</a></li>
+    </ul>
+  </div>
+
+  <p class="creditos">
+    Sitio desarrollado por 
+    <a href="https://www.instagram.com/digitanea" target="_blank">Digitanea</a>
+  </p>
+
+</footer>
+
+<script>
+  const hamb = document.getElementById("hamburgerMenu");
+  const menu = document.getElementById("footerMenu");
+
+  hamb.addEventListener("click", () => {
+    menu.classList.toggle("activo");
+  });
+</script>
 
   <!-- Scripts -->
   <script src="./js/main.js"></script>

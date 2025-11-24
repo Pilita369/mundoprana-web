@@ -219,3 +219,16 @@ modalMenu.addEventListener("click", (e) => {
     modalMenu.style.display = "none";
   }
 });
+
+
+/* FOOTER – menú hamburguesa del index */
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburguer = document.getElementById("hamburgerMenu");
+  const menu = document.getElementById("footerMenu");
+
+  if (hamburguer) {
+    hamburguer.addEventListener("click", () => {
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+  }
+});
