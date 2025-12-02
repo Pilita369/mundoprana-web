@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bitácora Prana | Mundo Prana</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Estilos globales primero -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <!-- Estilos específicos del blog después (para que puedan sobrescribir si hace falta) -->
+  <link rel="stylesheet" href="../css/blog.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER UNIFICADO ===== -->
+  <header class="header-principal">
+    <nav class="nav-prana">
+      <!-- Logo -->
+      <a href="../index.html" class="logo-link">
+        <img src="../img/Logo/Diseño sin título (13).png" alt="Logo Mundo Prana" class="logo-header">
+      </a>
+
+      <!-- Navegación -->
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./filosofia.html">Filosofía</a></li>
+        <li><a href="./blog.html" class="activo">Blog</a></li>
+        <li><a href="./contactos.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO BLOG ===== -->
+  <section class="hero-blog fade-in-blog">
+    <div class="hero-blog-contenido">
+      <h1 class="titulo-blog">Bitácora Prana</h1>
+      <p>Historias, aprendizajes y pequeños caos deliciosos de una cocina real.</p>
+    </div>
+  </section>
+
+  <!-- ===== LISTA DE ARTÍCULOS (TARJETAS) ===== -->
+  <main class="blog-main">
+    <section class="blog-grid">
+
+      <!-- Artículo 1 -->
+      <article class="blog-card fade-in-blog">
+        <img src="../img/productos/viandas-productos.jpg" alt="Viandas semanales organizadas">
+        <div class="blog-info">
+          <h3>🍱 Cómo organizar mis viandas semanales</h3>
+          <p>Un paso a paso simple para planificar tu semana, evitar el “no sé qué comer” y ahorrar tiempo en la cocina.</p>
+          <a href="./blog-organizar-viandas.html" class="leer-mas">Leer artículo</a>
+        </div>
+      </article>
+
+      <!-- Artículo 2 -->
+      <article class="blog-card fade-in-blog">
+        <img src="../img/productos/pandemolde.png" alt="Pan integral sobre tabla">
+        <div class="blog-info">
+          <h3>🌾 Qué significa realmente “integral”</h3>
+          <p>¿Todo lo marrón es integral? Claves para entender etiquetas, harinas y elegir mejor lo que llevás a tu mesa.</p>
+          <a href="./blog-integral.html" class="leer-mas">Leer artículo</a>
+        </div>
+      </article>
+
+      <!-- Artículo 3 -->
+      <article class="blog-card fade-in-blog">
+        <img src="../img/img-pilar/blanco.horizontal.png" alt="Cocinar como meditación">
+        <div class="blog-info">
+          <h3>🧘‍♀️ La cocina como meditación</h3>
+          <p>Cómo transformar el momento de cocinar en un pequeño ritual de presencia, calma y autocuidado.</p>
+          <a href="./blog-cocina-meditacion.html" class="leer-mas">Leer artículo</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- ===== LLAMADO FINAL ===== -->
+  <section class="blog-final fade-in-blog">
+    <h2>💬 ¿Te pasó algo parecido en tu cocina?</h2>
+    <p>Contanos tu experiencia, tu receta imperfecta o esa combinación inesperada que te sorprendió. 
+      En Mundo Prana creemos que la cocina es un viaje compartido.</p>
+
+    <a href="https://wa.me/5492996060776?text=Hola%20Mundo%20Prana!%20Quiero%20contarles%20mi%20experiencia%20en%20la%20cocina%20🍲"
+       target="_blank"
+       class="btn-carta">
+      Enviar mensaje
+    </a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-minimal fade-in-blog">
+    <div class="footer-contenedor">
+
+      <div class="footer-izquierda">
+        <img src="../img/Logo/Diseño sin título (13).png" alt="Logo Mundo Prana" class="footer-logo">
+        <div class="footer-redes">
+          <a href="https://www.instagram.com/mundopranapatagonia" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/mundopranapatagonia" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+      
+
+    </div>
+
+    <p class="creditos">
+      Sitio desarrollado por 
+      <a href="https://www.instagram.com/digitanea" target="_blank">Digitanea</a>
+    </p>
+  </footer>
+
+  <!-- ===== EFECTO FADE-IN SUAVE ===== -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elementos = document.querySelectorAll(".fade-in-blog");
+
+    const observer = new IntersectionObserver((entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("visible");
+          observer.unobserve(entrada.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elementos.forEach(el => observer.observe(el));
+  });
+  </script>
+
+</body>
+</html>

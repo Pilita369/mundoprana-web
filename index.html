@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mundo Prana | Viandas Saludables en Neuquén</title>
+
+  <!-- ===== META SEO PRINCIPALES ===== -->
+  <meta name="description" content="Mundo Prana ofrece viandas saludables, menú del día, cocina natural e integral en Neuquén. Alimentación consciente creada por la chef naturista Pilar.">
+  <meta name="keywords" content="viandas saludables neuquen, comida saludable, menú del día neuquén, cocina natural, viandas caseras, comida integral neuquen, mundo prana">
+  <link rel="canonical" href="https://mundoprana.com/"> <!-- Cambiar por tu dominio final -->
+
+  <!-- ===== META OPEN GRAPH (para compartir en redes) ===== -->
+  <meta property="og:title" content="Mundo Prana | Viandas Saludables en Neuquén">
+  <meta property="og:description" content="Viandas saludables, menú diario y cocina integral hecha con amor. Alimentación consciente para todos los días.">
+  <meta property="og:image" content="https://mundoprana.com/img/portada2.png"> <!-- Cambiar por tu dominio -->
+  <meta property="og:url" content="https://mundoprana.com/">
+  <meta property="og:type" content="website">
+
+  <!-- ===== TWITTER CARDS ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mundo Prana | Alimentación Consciente">
+  <meta name="twitter:description" content="Viandas saludables, menú del día y comida natural en Neuquén.">
+  <meta name="twitter:image" content="https://mundoprana.com/img/portada2.png">
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/png" href="./img/Logo/favicon.png"> <!-- Cambiar si tenés uno distinto -->
+
+  <!-- ===== TIPOGRAFÍAS ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <!-- ===== ICONOS ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ===== ESTILOS PRINCIPALES ===== -->
+  <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay">
+      <h1>Comer saludable es un acto de amor propio 🌿</h1>
+      <a href="#fundadora" class="btn btn-vermas">VER MÁS</a>
+    </div>
+  </section>
+
+  <!-- FUNDADORA -->
+  <section class="fundadora" id="fundadora">
+    <div class="fundadora-contenedor">
+      <div class="fundadora-imagen">
+        <img src="./img/img-pilar/chaqueta.negra.png" alt="Pilar - fundadora de Mundo Prana">
+      </div>
+      <div class="fundadora-texto">
+        <h2>Conocé a Pilar 💫</h2>
+        <p>Chef naturista, creadora de Mundo Prana y apasionada por compartir una forma más consciente de alimentarse.</p>
+        <button class="btn-sobre-pilar" id="abrirCarruselPilar">Más sobre Pilar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL PILAR -->
+  <div class="carrusel-pilar" id="modalPilar">
+    <div class="carrusel-contenedor-pilar">
+      <span class="cerrar-pilar" id="cerrarPilar">&times;</span>
+
+     <div class="tarjeta-pilar activa">
+  <img src="./img/img-pilar/3erpuesto.png" alt="Premio Centro PyME" class="tarjeta-img">
+  <h3>🏆 Emprendimiento Destacado</h3>
+  <p>Reconocida con el <strong>3° puesto</strong> en el certamen provincial de Centro PyME ADENEU.</p>
+
+  <!-- ENLACE A LA NOTA -->
+  <a href="https://www.neuqueninforma.gob.ar/noticias/2021/10/13/176688-ganadores-del-premio-joven-emprendedor-2021#:~:text=,hacia%20una%20alimentaci%C3%B3n%20m%C3%A1s%20saludable"
+     target="_blank"
+     class="btn-pilar-link">
+     Leer nota completa
+  </a>
+</div>
+
+
+      <div class="tarjeta-pilar">
+        <img src="./img/pilar/clase3.png" alt="Capacitaciones en cocina saludable" class="tarjeta-img">
+        <h3>📚 Capacitaciones Gastronómicas</h3>
+        <p>Brinda talleres para emprendedores y equipos de cocina sobre cocina natural y planificación saludable.</p>
+      </div>
+
+      <div class="tarjeta-pilar">
+        <img src="./img/img-pilar/1erpuestoveggie.png" alt="Participación en Competencia de cocina veggie" class="tarjeta-img">
+        <h3>🤝 Participación y Comunidad</h3>
+        <p>Participó en distintas competencias de cocina saludable, obteniendo altas disticiones</p>
+      </div>
+
+      <div class="controles-pilar">
+        <button id="anteriorPilar">⟵</button>
+        <button id="siguientePilar">⟶</button>
+      </div>
+    </div>
+  </div>
+
+ <!-- SECCIÓN CARTAS -->
+<section class="cartas" id="cartas">
+  <h2>🍱 Nuestras Cartas y Menús</h2>
+  <p class="intro-cartas">
+    Elegí la opción que mejor se adapte a vos: congelados, carta fija o menú del día.
+  </p>
+<!-- =============================== -->
+<!-- CONTENEDOR DE TARJETAS (GRID)  -->
+<!-- =============================== -->
+<div class="cartas-grid">
+
+  <!-- TARJETA 1 — MENÚS CONGELADOS -->
+  <div class="carta-card">
+    <img src="./img/carta-congelados/1.png" alt="Carta congelados Mundo Prana">
+    <h3>Menús Congelados</h3>
+    <p>Descubrí todas las opciones congeladas disponibles.</p>
+    <button class="btn-carta" id="btnCong">Ver carta completa</button>
+  </div>
+
+  <!-- TARJETA 2 — CARTA FIJA -->
+  <div class="carta-card">
+    <img src="./img/carta.fija/hoja1.png" alt="Carta fija Mundo Prana">
+    <h3>Carta Fija</h3>
+    <p>Descubrí nuestras preparaciones integrales más pedidas, disponibles todo el año.</p>
+    <button class="btn-carta" id="verCartaZoom">Ver carta completa</button>
+  </div>
+
+  <!-- TARJETA 3 — MENÚ DIARIO -->
+  <div class="carta-card">
+    <img src="./img/menu.diario/menu17.11.25.png" alt="Menú diario Mundo Prana">
+    <h3>Menú del Día</h3>
+    <p>
+      Opciones frescas todas las semanas 🍃<br>
+      Pedí con anticipación para retirar por el local o coordinar envío.
+    </p>
+    <button class="btn-carta" id="verMenuZoom">Ver menú completo</button>
+  </div>
+
+</div> <!-- FIN CARTAS GRID -->
+</section>
+
+
+<!-- ==================================================== -->
+<!-- MODAL — COMBOS                                       -->
+<!-- ==================================================== -->
+<div class="modal-combo" id="modalCombo">
+  <div class="modal-combo__box">
+
+    <button class="modal-combo__close" id="cerrarCombo">&times;</button>
+    <h3>🍱 Armá tu combo saludable</h3>
+
+    <div class="modal-combo__opciones">
+      <button class="btn-carta combo-btn" data-combo="5">Combo x5 ($8.000 c/u)</button>
+      <button class="btn-carta combo-btn" data-combo="10">Combo x10 ($7.500 c/u)</button>
+      <button class="btn-carta combo-btn" data-combo="15">Combo x15+ ($7.000 c/u)</button>
+    </div>
+
+    <table class="modal-combo__tabla" id="tablaViandas">
+      <thead>
+        <tr><th>Vianda</th><th>Cantidad</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <p class="modal-combo__total" id="totalCombo">Seleccioná tus viandas 👇</p>
+    <p class="modal-combo__alerta" id="alertaCombo"></p>
+
+    <div class="modal-combo__acciones">
+      <button class="btn-carta" id="btnEnviarCombo">Enviar pedido por WhatsApp</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ==================================================== -->
+<!-- MODAL — CARTA CONGELADOS (IMÁGENES + LISTA)          -->
+<!-- ==================================================== -->
+<!-- MODAL — CARTA CONGELADOS -->
+<div class="modal-cong" id="modalCong">
+
+  <span class="modal-cong__cerrar" id="cerrarCong">×</span>
+
+  <button class="modal-cong__flecha izq" id="congPrev">❮</button>
+  <button class="modal-cong__flecha der" id="congNext">❯</button>
+
+  <div class="modal-cong__box">
+
+    <!-- Imagen -->
+    <img id="congImg" class="modal-cong__img"
+         src="./img/carta-congelados/1.png" alt="Carta congelados Mundo Prana">
+
+    <div class="modal-cong__contenido">
+
+      <h3>Elegí tu combo de viandas congeladas 🍱</h3>
+
+      <!-- BOTONES DE COMBOS -->
+      <div class="modal-cong__opciones">
+        <button class="btn-carta cong-combo" data-cong="5">Combo x5 ($8.000 c/u)</button>
+        <button class="btn-carta cong-combo" data-cong="10">Combo x10 ($7.500 c/u)</button>
+        <button class="btn-carta cong-combo" data-cong="15">Combo x15+ ($7.000 c/u)</button>
+      </div>
+
+      <!-- TABLA DE VIANDAS -->
+      <table class="modal-cong__tabla" id="tablaCongelados">
+        <thead>
+          <tr><th>Vianda</th><th>Cantidad</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <p class="modal-cong__total" id="totalCong">Seleccioná tus viandas 👇</p>
+      <p class="modal-cong__alerta" id="alertaCong"></p>
+
+      <button class="btn-carta" id="enviarCong">Enviar pedido por WhatsApp</button>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<!-- ==================================================== -->
+<!-- MODAL — CARTA FIJA                                   -->
+<!-- ==================================================== -->
+<div class="modal-carta" id="modalCarta">
+
+  <span class="cerrar-carta" id="cerrarCarta">&times;</span>
+
+  <button class="flecha-carta flecha-carta-izq" id="cartaAnterior">&#10094;</button>
+  <button class="flecha-carta flecha-carta-der" id="cartaSiguiente">&#10095;</button>
+
+  <img id="imgCartaAmpliada"
+       class="modal-carta-img"
+       src="./img/carta.fija/hoja1.png"
+       alt="Carta Fija Mundo Prana">
+</div>
+
+
+<!-- ==================================================== -->
+<!-- MODAL — MENÚ DIARIO                                  -->
+<!-- ==================================================== -->
+<div class="modal-carta" id="modalMenu">
+
+  <span class="cerrar-carta" id="cerrarMenu">&times;</span>
+
+  <button class="flecha-carta flecha-carta-izq" id="menuAnterior">&#10094;</button>
+  <button class="flecha-carta flecha-carta-der" id="menuSiguiente">&#10095;</button>
+
+  <img id="imgMenuAmpliado"
+       class="modal-carta-img"
+       src="./img/menu.diario/menu17.11.25.png"
+       alt="Menú diario ampliado">
+</div>
+
+
+
+   <!-- FRASE DESTACADA -->
+  <section class="frase">
+    <div class="frase-contenedor">
+      <p class="frase-texto">“No hay dos personas exactamente iguales.”</p>
+      <p class="frase-sub">Por eso nuestros programas están individualizados.</p>
+    </div>
+  </section>
+
+  <!-- GALERÍA SALUDABLE -->
+<section class="galeria-saludable" id="saludables">
+  <h2>🌱 Nuestras Opciones Saludables</h2>
+  <p class="intro-carrusel">
+    Platos que combinan sabor, equilibrio y frescura 🍃
+  </p>
+
+  <div class="galeria-contenedor">
+    <div class="galeria" id="galeria-saludables">
+      <div class="slide activo">
+        <img src="./img/productos/tarta-calabaza.png" alt="Tarta de calabaza integral">
+        <div class="descripcion">
+          <h3>Tarta de calabaza integral</h3>
+          <p>Base 100% integral con puré de calabaza, cebolla y queso suave.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="./img/productos/ensalada-4colores.png" alt="Ensalada 4 colores">
+        <div class="descripcion">
+          <h3>Ensalada 4 colores</h3>
+          <p>Mix fresco de hojas verdes, zanahoria, tomate y remolacha con aderezo natural.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="./img/productos/ensalada-poolo2.png" alt="Vianda de pollo con vegetales">
+        <div class="descripcion">
+          <h3>Vianda de pollo con vegetales</h3>
+          <p>Pollo al vapor con vegetales salteados y arroz yamani.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="./img/productos/hambur-mijo.png" alt="Hamburguesa de mijo">
+        <div class="descripcion">
+          <h3>Hamburguesa de mijo</h3>
+          <p>Vegana, sin fritura. Con mijo, avena y especias naturales.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="./img/productos/yogur-natural.png" alt="Yogur natural con granola">
+        <div class="descripcion">
+          <h3>Yogur natural con granola</h3>
+          <p>Hecho en casa con semillas y granola artesanal. Sin azúcar refinada.</p>
+        </div>
+      </div>
+
+      <button class="flecha flecha-izq">&#10094;</button>
+      <button class="flecha flecha-der">&#10095;</button>
+    </div>
+
+    <div class="indicadores" id="indicadores-saludables"></div>
+  </div>
+</section>
+
+
+<!-- ======================================================= -->
+<!-- ======== SECCIÓN DE TESTIMONIOS CON AVATARES ========= -->
+<!-- ======================================================= -->
+<section class="testimonios">
+  <h2> Lo que dicen nuestros clientes</h2>
+
+  <!-- Contenedor principal del carrusel -->
+  <div class="testimonios-slider" id="sliderTestimonios">
+
+    <!-- Grupo 1 -->
+    <div class="grupo-testimonios activo">
+      <div class="testimonio">
+        <img src="./img/clientes/femenino.webp" alt="Cliente feliz">
+      <p>"Gracias por la paciencia
+Cumpliste horarios establecidos, la comida fresca, en forma, nos diste lo solicitado.Muchas gracias por todo!!
+Lo único que no me gustó fue que no te pude dar un abrazo y conocer a tu bb
+Les mando un fuerte abrazo a tu flia y gracias por ser parte de este proceso que vivimos
+Nos vemos en las vueltas de la vida!
+🫂!"</p>
+        <span>— Noe Muñoz "(CAMPEONATO ARGENTINO DE SELECCIONES ASCENSO MAYORES EN NEUQUEN-SAN LUIS)"</span>
+      </div>
+      <div class="testimonio">
+        <img src="./img/clientes/masculino.webp" alt="Cliente feliz">
+        <p>"Gracias a Mundo Prana, comer saludable dejó de ser un esfuerzo. Es placer puro."</p>
+        <span>— Pablo R.</span>
+      </div>
+      <div class="testimonio">
+        <img src="./img/clientes/femenino.webp" alt="Cliente feliz">
+        <p>"Excelente atención y calidad. Se nota el amor en cada preparación."</p>
+        <span>— Lucía V.</span>
+      </div>
+    </div>
+
+    <!-- Grupo 2 -->
+    <div class="grupo-testimonios">
+      <div class="testimonio">
+        <img src="./img/clientes/masculino.webp" alt="Cliente feliz">
+        <p>"Me ayudaron a organizar mis comidas semanales sin complicaciones. ¡Un 10!"</p>
+        <span>— Nicolás P.</span>
+      </div>
+      <div class="testimonio">
+        <img src="./img/clientes/femenino.webp" alt="Cliente feliz">
+        <p>"Mundo Prana tiene el mejor menú saludable! Yo lo recomiendo 100%. 
+          Mis favoritas son las viandas proteicas y sin gluten! Además Ro es un amor, 
+          super cálida y amable su atención!"</p>
+        <span>— Tamara Dias</span>
+      </div>
+      <div class="testimonio">
+        <img src="./img/clientes/masculino.webp" alt="Cliente feliz">
+        <p>"Ideal para mi rutina, saludable y con mucho sabor. ¡Recomiendo 100%!"</p>
+        <span>— Esteban L.</span>
+      </div>
+    </div>
+
+    <!-- Grupo 3 -->
+    <div class="grupo-testimonios">
+      <div class="testimonio">
+        <img src="./img/clientes/femenino.webp" alt="Cliente feliz">
+        <p>"Probé una vez y ya soy fan. ¡Se nota la dedicación en cada plato!"</p>
+        <span>— Florencia A.</span>
+      </div>
+      <div class="testimonio">
+        <img src="./img/clientes/femenino.webp" alt="Cliente feliz">
+        <p>"La mejor opción para comer sano sin perder tiempo en la cocina."</p>
+        <span>— Camila S.</span>
+      </div>
+      <div class="testimonio">
+        <img src="./img/clientes/masculino.webp" alt="Cliente feliz">
+        <p>"Viandas equilibradas, sabrosas y con ingredientes de calidad. ¡Felicitaciones!"</p>
+        <span>— Andrés M.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Indicadores circulares -->
+  <div class="indicadores-testimonios" id="indicadoresTestimonios"></div>
+</section>
+
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/5492996060776" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+ <footer class="footer-index">
+
+  <div class="footer-izq">
+    <img src="./img/Logo/Diseño sin título (13).png" class="footer-logo" alt="Mundo Prana">
+    
+    <div class="footer-redes">
+      <a href="https://www.instagram.com/mundopranapatagonia/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/mundopranapatagonia" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+    </div>
+  </div>
+
+  <!-- MENÚ DE ESCRITORIO -->
+  <ul class="footer-menu-desktop">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="./page/filosofia.html">Filosofía</a></li>
+    <li><a href="./page/blog.html">Blog</a></li>
+    <li><a href="./page/contactos.html">Contacto</a></li>
+  </ul>
+
+  <!-- MENÚ HAMBURGUESA SOLO MÓVIL -->
+  <div class="footer-nav-movil">
+    <button class="hamburger" id="hamburgerMenu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <ul class="footer-menu" id="footerMenu">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="./page/filosofia.html">Filosofía</a></li>
+      <li><a href="./page/blog.html">Blog</a></li>
+      <li><a href="./page/contactos.html">Contacto</a></li>
+    </ul>
+  </div>
+
+
+
+  <p class="creditos">
+    Sitio desarrollado por 
+    <a href="https://www.instagram.com/digitanea" target="_blank">Digitanea</a>
+  </p>
+
+</footer>
+
+<script>
+  const hamb = document.getElementById("hamburgerMenu");
+  const menu = document.getElementById("footerMenu");
+
+  hamb.addEventListener("click", () => {
+    menu.classList.toggle("activo");
+  });
+</script>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+  <script src="./js/combo.js"></script>
+  <script src="./js/testimonios.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+/* ============================================= */
+/* CONTACTO – ESTILO MUNDO PRANA 🍃 */
+/* ============================================= */
+
+html, body {
+  overflow-x: hidden;
+}
+
+.hero-contacto {
+  background: linear-gradient(rgba(72,120,80,0.55), rgba(129, 125, 125, 0.1)),
+              url("../img/fondos/fondo-frase-destacada.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 5rem 1rem;
+  color: #fff;
+}
+
+.titulo-contacto {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-contacto .titulo-contacto {
+  color: #ffffff;
+}
+
+.hero-contacto p {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+
+
+/* Contenedor principal */
+.contacto-contenedor {
+  max-width: 1100px;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 0 1.5rem;
+}
+
+.contacto-form, .contacto-info {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Formulario */
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.campo label {
+  font-weight: 600;
+  color: #2a9646;
+  margin-bottom: 0.3rem;
+}
+
+.campo input,
+.campo textarea {
+  border: 1px solid #c7d8c5;
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-enviar {
+  background: #48a76f;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.btn-enviar:hover {
+  background: #2a5954;
+}
+
+.btn-wapp {
+  margin-top: 1rem;
+  display: inline-block;
+  background: #25d366;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-wapp:hover {
+  filter: brightness(0.9);
+}
+
+/* Info de contacto */
+.contacto-info h2 {
+  margin-bottom: 1rem;
+  color: #2a5954;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.info-item i {
+  color: #48a76f;
+  font-size: 1.4rem;
+}
+
+/* Mapa */
+.mapa-seccion {
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.mapa-seccion h2 {
+  font-family: "Playfair Display", serif;
+  color: #2a5954;
+  margin-bottom: 1rem;
+}
+
+.mapa-contenedor {
+  max-width: 1100px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contacto-contenedor {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mapa-boton {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.btn-como-llegar {
+  display: inline-block;
+  background-color: #682288;        /* Violeta Mundo Prana */
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.btn-como-llegar i {
+  margin-right: 8px;
+}
+
+.btn-como-llegar:hover {
+  background-color: #4b1762;
+  transform: translateY(-2px);
+}
