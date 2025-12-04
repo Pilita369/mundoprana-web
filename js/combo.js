@@ -18,10 +18,10 @@ const alertaCong = document.getElementById("alertaCong");
 const enviarCong = document.getElementById("enviarCong");
 
 const hojasCong = [
-  "./img/carta-congelados/1.png",
-  "./img/carta-congelados/6.jpg",
-  "./img/carta-congelados/7.jpg",
-  "./img/carta-congelados/8.jpg",
+  "img/carta-congelados/1portadacongelados.webp",
+  "./img/carta-congelados/6congelados.webp",
+  "./img/carta-congelados/7congelados.webp",
+  "./img/carta-congelados/8congelados.webp",
 ];
 
 let congIndex = 0;

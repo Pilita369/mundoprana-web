@@ -124,7 +124,7 @@ button, .btn, .btn-sobre-pilar {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('../img/portada2.png');
+  background-image: url('../img/portada/portada2.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
