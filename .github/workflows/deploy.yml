@@ -1,21 +1,21 @@
-name: Deploy a DonWeb (FTP)
+name: Deploy automático por FTP
 
 on:
   push:
     branches:
-      - main
+      - main  # o "principal" si es tu rama actual
 
 jobs:
   ftp-deploy:
-    name:  Implementar vía FTP
+    name: Subida vía FTP
     runs-on: ubuntu-latest
 
     steps:
-      - name:  Clonar el repo
+      - name: Clonar el repo
         uses: actions/checkout@v3
 
-      - name:  Subir al servidor vía FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Subir al servidor DonWeb vía FTP
+        uses: SamKirkland/FTP-Deploy-Action@v3.1.0
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
