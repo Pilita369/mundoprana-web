@@ -3,7 +3,7 @@ name: 🚀 Deploy automático por FTP
 on:
   push:
     branches:
-      - main
+      - main  # o "principal" si es tu rama actual
 
 jobs:
   ftp-deploy:
