@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuSig = document.getElementById("menuSiguiente");
   const imgMenu = document.getElementById("imgMenuAmpliado");
 
-  const paginasMenu = ["./img/menu.diario/menu17.11.25.png"];
+  const paginasMenu = ["./img/menu.diario/Menú estilo new.webp"];
   let indexMenu = 0;
 
   if (abrirMenu) abrirMenu.addEventListener("click", () => {
