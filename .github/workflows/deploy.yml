@@ -3,7 +3,7 @@ name: 🚀 Deploy automático por FTP
 on:
   push:
     branches:
-      - main  # o "principal" si es tu rama actual
+      - main  # O master si tu rama principal es master
 
 jobs:
   ftp-deploy:
@@ -12,12 +12,14 @@ jobs:
 
     steps:
       - name: Clonar el repositorio
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Subir al servidor DonWeb vía FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Subir al servidor vía FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local-dir: MundoPrana
+          local-dir: ./                    # Sube todo lo que está en tu repo
+          server-dir: /public_html/        # ¡Carpeta obligatoria en DonWeb/Ferozo!
+          protocol: ftp                    # Primero prueba con "ftp" (sin s). Si falla conexión, cambia a "ftps"
