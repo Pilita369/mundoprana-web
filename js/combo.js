@@ -30,8 +30,8 @@ let congIndex = 0;
 /* ------------ COMBOS ------------ */
 const combosCongelados = {
   5: { precio: 10000, min: 5, max: 9 },
-  10: { precio: 9500, min: 10, max: 14 },
-  15: { precio: 9500, min: 15, max: 50 }
+  10: { precio: 9000, min: 10, max: 14 },
+  15: { precio: 8000, min: 15, max: 50 }
 };
 
 let comboCongActual = 5;
