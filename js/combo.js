@@ -93,15 +93,32 @@ congPrev?.addEventListener("click", () => {
   congImg.src = hojasCong[congIndex];
 });
 
+/* ------------ Deshabilitar botón al inicio ------------ */
+enviarCong.disabled = true;
+enviarCong.style.opacity = "0.4";
+enviarCong.style.cursor = "not-allowed";
+
 /* ------------ Cambiar combo ------------ */
 document.querySelectorAll(".cong-combo").forEach(btn => {
   btn.addEventListener("click", () => {
     comboCongActual = parseInt(btn.dataset.cong);
+    document.querySelectorAll(".cong-combo").forEach(b => b.classList.remove("activo"));
+    btn.classList.add("activo");
     totalCong.textContent = "Seleccioná tus viandas 👇";
     alertaCong.textContent = "";
     tablaCongBody.querySelectorAll("input").forEach(inp => inp.value = 0);
+    actualizarBoton(0);
   });
 });
+
+/* ------------ Habilitar/deshabilitar botón ------------ */
+function actualizarBoton(totalViandas) {
+  const { min, max } = combosCongelados[comboCongActual];
+  const valido = totalViandas >= min && totalViandas <= max;
+  enviarCong.disabled = !valido;
+  enviarCong.style.opacity = valido ? "1" : "0.4";
+  enviarCong.style.cursor = valido ? "pointer" : "not-allowed";
+}
 
 /* ------------ Calcular total ------------ */
 tablaCongBody.addEventListener("input", () => calcularTotalCong());
@@ -112,39 +129,37 @@ function calcularTotalCong() {
     .filter(x => x.cantidad > 0);
 
   const totalViandas = datos.reduce((a, x) => a + x.cantidad, 0);
-  const precioUnit = combosCongelados[comboCongActual].precio;
-  const total = totalViandas * precioUnit;
+  const { min, max, precio } = combosCongelados[comboCongActual];
+  const total = totalViandas * precio;
 
-  const { min, max } = combosCongelados[comboCongActual];
-
-  if (totalViandas < min) {
-    alertaCong.textContent = `⚠️ Debés elegir al menos ${min} viandas.`;
-  } else if (totalViandas > max) {
-    alertaCong.textContent = `⚠️ Máximo permitido: ${max} viandas.`;
-  } else {
+  if (totalViandas === 0) {
     alertaCong.textContent = "";
+    totalCong.textContent = "Seleccioná tus viandas 👇";
+  } else if (totalViandas < min) {
+    alertaCong.textContent = `⚠️ Necesitás al menos ${min} viandas para este combo (te faltan ${min - totalViandas}).`;
+    totalCong.textContent = `Viandas: ${totalViandas}`;
+  } else if (totalViandas > max) {
+    alertaCong.textContent = `⚠️ Máximo ${max} viandas para este combo.`;
+    totalCong.textContent = `Viandas: ${totalViandas}`;
+  } else {
+    alertaCong.textContent = "✅ ¡Listo! Podés enviar tu pedido.";
+    totalCong.textContent = `Viandas: ${totalViandas} — Total: $${total.toLocaleString("es-AR")}`;
   }
 
-  totalCong.textContent = `Viandas: ${totalViandas} — Total: $${total.toLocaleString("es-AR")}`;
-
+  actualizarBoton(totalViandas);
   return { datos, total, totalViandas };
 }
 
 /* ------------ Enviar a WhatsApp ------------ */
 enviarCong.addEventListener("click", () => {
+  if (enviarCong.disabled) return;
+
   const { datos, total, totalViandas } = calcularTotalCong();
-  const { min, max } = combosCongelados[comboCongActual];
-
-  if (totalViandas < min || totalViandas > max) {
-    alertaCong.textContent = "⚠️ Revisá las cantidades antes de enviar.";
-    return;
-  }
-
   const resumen = datos.map(d => `• ${d.nombre}: ${d.cantidad}`).join("\n");
 
   const mensaje = encodeURIComponent(
-    `🍱 Pedido Congelados\n\nCombo: ${comboCongActual} viandas\n${resumen}\n\nTotal: $${total.toLocaleString("es-AR")}`
+    `🍱 Pedido Congelados\n\nCombo: ${comboCongActual} viandas ($${combosCongelados[comboCongActual].precio.toLocaleString("es-AR")} c/u)\n${resumen}\n\nTotal: $${total.toLocaleString("es-AR")}`
   );
 
-  window.open(`https://wa.me/5492996060776?text=${mensaje}`, "_blank");
+  location.href = `https://wa.me/5492996060776?text=${mensaje}`;
 });
