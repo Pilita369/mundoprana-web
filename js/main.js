@@ -126,8 +126,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartaSig = document.getElementById("cartaSiguiente");
 
   const paginasCarta = [
-    "./img/carta.fija/cartafija1.webp",
-    "./img/carta.fija/cartafija2.webp"
+    "./img/carta.fija/fija3.webp",
+    "./img/carta.fija/fija4.webp",
+    "./img/carta.fija/fija5.webp"
   ];
   let indexCarta = 0;
 
