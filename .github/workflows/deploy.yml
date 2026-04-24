@@ -1,9 +1,7 @@
 name: 🚀 Deploy automático por FTP
 
 on:
-  push:
-    branches:
-      - main  # O master si tu rama principal es master
+  workflow_dispatch:  # Solo manual hasta confirmar la ruta correcta
 
 jobs:
   ftp-deploy:
