@@ -126,9 +126,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartaSig = document.getElementById("cartaSiguiente");
 
   const paginasCarta = [
-    "./img/carta.fija/fija3.webp",
-    "./img/carta.fija/fija4.webp",
-    "./img/carta.fija/fija5.webp"
+    "./img/carta.fija/fija1.webp",
+    "./img/carta.fija/fija2.webp",
+    "./img/carta.fija/fija3.webp"
   ];
   let indexCarta = 0;
 
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuSig = document.getElementById("menuSiguiente");
   const imgMenu = document.getElementById("imgMenuAmpliado");
 
-  const paginasMenu = ["./img/menu.diario/menuabril.webp"];
+  const paginasMenu = ["./img/menu.diario/menudiario.webp"];
   let indexMenu = 0;
 
   if (abrirMenu) abrirMenu.addEventListener("click", () => {
