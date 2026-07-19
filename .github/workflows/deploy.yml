@@ -20,13 +20,11 @@ jobs:
       - name: Subir al servidor vía FTP
         run: |
           lftp -e "
-            set ftp:passive-mode true;
-            set ssl:verify-certificate no;
-            set net:timeout 30;
-            set net:max-retries 3;
-            open ftp://${{ secrets.FTP_USER }}:${{ secrets.FTP_PASS }}@${{ secrets.FTP_HOST }};
-            mirror --reverse --verbose --exclude .git/ ./ /public_html/mundoprana/;
-            find /public_html/mundoprana/ -type d -exec chmod 755 {} \;;
-            find /public_html/mundoprana/ -type f -exec chmod 644 {} \;;
-            quit
+          set ftp:passive-mode true;
+          set ssl:verify-certificate no;
+          set net:timeout 30;
+          set net:max-retries 3;
+          open ftp://${{ secrets.FTP_USER }}:${{ secrets.FTP_PASS }}@${{ secrets.FTP_HOST }};
+          mirror --reverse --verbose --exclude .git/ ./ /public_html/mundoprana/;
+          quit
           "
