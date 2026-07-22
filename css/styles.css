@@ -609,6 +609,20 @@ button, .btn, .btn-sobre-pilar {
   padding: 0.3rem;
 }
 
+.modal-cong__precio {
+  font-weight: bold;
+  color: #2a5954;
+}
+
+.modal-cong__envio {
+  font-size: 0.9rem;
+  color: #5a3d7a;
+  background: #f2ecfa;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .modal-cong__total {
   margin-top: 0.5rem;
   font-weight: bold;
