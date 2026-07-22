@@ -140,39 +140,6 @@
 
 
 <!-- ==================================================== -->
-<!-- MODAL — COMBOS                                       -->
-<!-- ==================================================== -->
-<div class="modal-combo" id="modalCombo">
-  <div class="modal-combo__box">
-
-    <button class="modal-combo__close" id="cerrarCombo">&times;</button>
-    <h3>🍱 Armá tu combo saludable</h3>
-
-    <div class="modal-combo__opciones">
-      <button class="btn-carta combo-btn" data-combo="5">Combo x5 ($8.000 c/u)</button>
-      <button class="btn-carta combo-btn" data-combo="10">Combo x10 ($7.500 c/u)</button>
-      <button class="btn-carta combo-btn" data-combo="15">Combo x15+ ($7.000 c/u)</button>
-    </div>
-
-    <table class="modal-combo__tabla" id="tablaViandas">
-      <thead>
-        <tr><th>Vianda</th><th>Cantidad</th></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-
-    <p class="modal-combo__total" id="totalCombo">Seleccioná tus viandas 👇</p>
-    <p class="modal-combo__alerta" id="alertaCombo"></p>
-
-    <div class="modal-combo__acciones">
-      <button class="btn-carta" id="btnEnviarCombo">Enviar pedido por WhatsApp</button>
-    </div>
-
-  </div>
-</div>
-
-
-<!-- ==================================================== -->
 <!-- MODAL — CARTA CONGELADOS (IMÁGENES + LISTA)          -->
 <!-- ==================================================== -->
 <!-- MODAL — CARTA CONGELADOS -->
@@ -193,7 +160,7 @@
 
       <h3>Armá tu pedido de viandas congeladas 🍱</h3>
       <p class="modal-cong__precio">$10.000 c/u</p>
-      <p class="modal-cong__envio">🚚 Envío SIN CARGO a partir de 15 viandas en zona centro y oeste de Neuquén. Indicá tu dirección al enviar el pedido para confirmar si aplica.</p>
+      <p class="modal-cong__envio">🚚 Envío SIN CARGO desde 15 viandas en zona centro y oeste de Neuquén. Fuera de esa zona se suma un costo extra de envío. Indicá tu dirección al hacer el pedido para calcularlo.</p>
 
       <!-- TABLA DE VIANDAS -->
       <table class="modal-cong__tabla" id="tablaCongelados">
@@ -226,10 +193,34 @@
   <button class="flecha-carta flecha-carta-izq" id="cartaAnterior">&#10094;</button>
   <button class="flecha-carta flecha-carta-der" id="cartaSiguiente">&#10095;</button>
 
-  <img id="imgCartaAmpliada"
-       class="modal-carta-img"
-       src="./img/carta.fija/fija1.webp"
-       alt="Carta Fija Mundo Prana">
+  <div class="modal-carta__box">
+
+    <img id="imgCartaAmpliada"
+         class="modal-carta-img"
+         src="./img/carta.fija/fija1.webp"
+         alt="Carta Fija Mundo Prana">
+
+    <div class="modal-carta__contenido">
+
+      <h3>Armá tu pedido de la Carta Fija 🍱</h3>
+      <p class="modal-carta__precio">$14.000 c/u</p>
+      <p class="modal-carta__envio">🚚 Envío SIN CARGO desde 15 unidades en zona centro y oeste de Neuquén. Fuera de esa zona se suma un costo extra de envío. Indicá tu dirección al hacer el pedido para calcularlo.</p>
+
+      <table class="modal-carta__tabla" id="tablaCartaFija">
+        <thead>
+          <tr><th>Preparación</th><th>Cantidad</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <p class="modal-carta__total" id="totalCartaFija">Seleccioná tus preparaciones 👇</p>
+      <p class="modal-carta__alerta" id="alertaCartaFija"></p>
+
+      <button class="btn-carta" id="enviarCartaFija">Enviar pedido por WhatsApp</button>
+
+    </div>
+
+  </div>
 </div>
 
 
@@ -456,6 +447,7 @@ Nos vemos en las vueltas de la vida!
   <!-- Scripts -->
   <script src="./js/main.js"></script>
   <script src="./js/combo.js"></script>
+  <script src="./js/carta-fija.js"></script>
   <script src="./js/testimonios.js"></script>
 </body>
 </html>
