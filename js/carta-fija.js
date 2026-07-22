@@ -85,7 +85,7 @@ enviarCarta.addEventListener("click", () => {
   const resumen = datos.map(d => `• ${d.nombre}: ${d.cantidad}`).join("\n");
 
   const mensaje = encodeURIComponent(
-    `🍱 Pedido Carta Fija ($${PRECIO_VIANDA_CARTA.toLocaleString("es-AR")} c/u)\n\n${resumen}\n\nTotal: $${total.toLocaleString("es-AR")}\n\n📍 Dirección de envío:\n🕒 Horario en que pueden recibir el pedido:`
+    `🍱 Pedido Carta Fija ($${PRECIO_VIANDA_CARTA.toLocaleString("es-AR")} c/u)\n\n${resumen}\n\nTotal: $${total.toLocaleString("es-AR")}\n\n📍 Mi ubicación/dirección (para revisar si aplica el envío sin cargo):\n🕒 Horario en el que puedo recibir el pedido:`
   );
 
   location.href = `https://wa.me/5492996060776?text=${mensaje}`;
