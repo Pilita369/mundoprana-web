@@ -22,9 +22,8 @@ const enviarCong = document.getElementById("enviarCong");
 
 const hojasCong = [
   "img/carta-congelados/1portadacongelados.webp",
-  "./img/carta-congelados/2congelados.webp",
-  "./img/carta-congelados/3congelados.webp",
-  "./img/carta-congelados/4congelados.webp",
+  "./img/carta-congelados/menu_nuevo.png",
+  "./img/carta-congelados/vegetariano_nevo.png",
 ];
 
 let congIndex = 0;
