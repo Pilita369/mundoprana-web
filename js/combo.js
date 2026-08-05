@@ -47,7 +47,7 @@ const viandasCong = [
       "Pollo a la Criolla",
       "Milanesa de Pollo",
       "Chop Suey de Pollo",
-      "Tarta Integral de pollo y acelga",
+      "Roll Integral de pollo y acelga",
       "Tarta Integral de pollo Primavera",
     ],
   },
