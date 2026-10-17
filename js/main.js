@@ -116,49 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* =======================================================
-      MODAL — CARTA FIJA (2 páginas)
-  ======================================================= */
-  const modalCarta = document.getElementById("modalCarta");
-  const imgCarta = document.getElementById("imgCartaAmpliada");
-  const abrirCarta = document.getElementById("verCartaZoom");
-  const cerrarCarta = document.getElementById("cerrarCarta");
-  const cartaAnt = document.getElementById("cartaAnterior");
-  const cartaSig = document.getElementById("cartaSiguiente");
-
-  const paginasCarta = [
-    "./img/carta.fija/fija1.webp",
-    "./img/carta.fija/fija2.webp",
-    "./img/carta.fija/fija3.webp"
-  ];
-  let indexCarta = 0;
-
-  if (abrirCarta) {
-    abrirCarta.addEventListener("click", () => {
-      indexCarta = 0;
-      imgCarta.src = paginasCarta[indexCarta];
-      modalCarta.style.display = "flex";
-    });
-  }
-
-  if (cerrarCarta) cerrarCarta.addEventListener("click", () => modalCarta.style.display = "none");
-
-  if (cartaSig) cartaSig.addEventListener("click", () => {
-    indexCarta = (indexCarta + 1) % paginasCarta.length;
-    imgCarta.src = paginasCarta[indexCarta];
-  });
-
-  if (cartaAnt) cartaAnt.addEventListener("click", () => {
-    indexCarta = (indexCarta - 1 + paginasCarta.length) % paginasCarta.length;
-    imgCarta.src = paginasCarta[indexCarta];
-  });
-
-  if (modalCarta) modalCarta.addEventListener("click", e => {
-    if (e.target === modalCarta) modalCarta.style.display = "none";
-  });
-
-
-
-  /* =======================================================
       MODAL — MENÚ DIARIO
   ======================================================= */
   const modalMenu = document.getElementById("modalMenu");
