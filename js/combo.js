@@ -22,8 +22,8 @@ const enviarCong = document.getElementById("enviarCong");
 
 const hojasCong = [
   "img/carta-congelados/1portadacongelados.webp",
-  "./img/carta-congelados/menu_nuevo.png",
-  "./img/carta-congelados/vegetariano_nevo.png",
+  "./img/carta-congelados/modif-1.png",
+  "./img/carta-congelados/modif-2.png",
 ];
 
 let congIndex = 0;
@@ -37,7 +37,7 @@ const viandasCong = [
       "Cuadril a las Hierbas",
       "Carne Desmechada a la Criolla",
       "Guiso de Lentejas con Carne",
-      "Tacos de Carne y Vegetales",
+      "Wok de vegetales y Carne",
     ],
   },
   {
@@ -47,7 +47,6 @@ const viandasCong = [
       "Pollo a la Criolla",
       "Milanesa de Pollo",
       "Chop Suey de Pollo",
-      "Roll Integral de pollo y acelga",
       "Tarta Integral de pollo Primavera",
     ],
   },
@@ -55,20 +54,15 @@ const viandasCong = [
     categoria: "Bondiola",
     items: [
       "Bondiola Braseada",
-      "Bondiola Desmenuzada",
     ],
   },
   {
     categoria: "Vegetariano",
     items: [
-      "Guiso de Lentejas con Hongos de pino",
-      "Salteado de Vegetales con Arroz Yamaní",
       "Hamburguesas Vegetarianas",
-      "Salteado de Vegetales",
+      "Wok de vegetales",
       "Tarta Integral de Acelga",
       "Tarta Integral de Brócoli",
-      "Pizzeta Napolitana Gourmet",
-      "Pizzeta Vegetariana Mediterránea",
     ],
   },
 ];
