@@ -22,8 +22,8 @@ const enviarCong = document.getElementById("enviarCong");
 
 const hojasCong = [
   "img/carta-congelados/1portadacongelados.webp",
-  "./img/carta-congelados/modif-1.png",
-  "./img/carta-congelados/modif-2.png",
+  "./img/carta-congelados/1aa.png",
+  "./img/carta-congelados/2ab.png",
 ];
 
 let congIndex = 0;
@@ -48,6 +48,7 @@ const viandasCong = [
       "Milanesa de Pollo",
       "Chop Suey de Pollo",
       "Tarta Integral de pollo Primavera",
+      "Tarta Integral de Acelga y pollo",
     ],
   },
   {
